@@ -4,31 +4,20 @@
     </head>
 
     <body>
-    <div>
-        <h1>Seth's Blog</h1>
-        <p>Welcome</p>
-    </div>
+        <div>
+            <h1><a href="">Seth's Blog</a></h1>
+            <p>Welcome</p>
+        </div>
 
-    <div>
-        <h2><a href="">Blog Post 1</a></h2>
-        <p>Blog Post 1 Content</p>
-        <p>Date: Insert curerent date and time</p>
-    </div>
+        {% for post in posts %}
+        
+            <div>
+                <p>published:{{ post.published_date }}</p>
+                <h2><a href="">{{post.title}}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
 
-    <div>
-        <h2><a href="">Blog Post 2</a></h2>
-        <p>Blog Post 2 Content</p>
-        <p>Date: Insert curerent date and time</p>
-    </div>
-
-    <div>
-        <h2><a href="">Blog Post 3</a></h2>
-        <p>Blog Post 3 Content</p>
-        <p>Date: Insert curerent date and time</p>
-    </div>
-
-
-
+        {% endfor %}
 
     </body>
 
